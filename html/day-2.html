@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- ========================================================================== -->
+
+    <!-- HTML Table -->
+
+    <!-- <table></table> element represent the table. -->
+    <!-- table row cell is defined by a <tr></tr> -->
+    <!-- table header cell is defined by a <th></th> -->
+    <!-- table data cell is defined by a <td></td> -->
+
+    <table border="1">
+      <tr>
+        <th>Column- 1</th>
+        <th>Column- 2</th>
+        <th>Column- 3</th>
+      </tr>
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td>Amazon</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Google</td>
+        <td>Francisco</td>
+        <td>Maxico</td>
+      </tr>
+    </table>
+
+    <!-- -------------------------------------------------------- -->
+
+    <table border="1">
+      <tr>
+        <th>Row -1</th>
+        <th>Company</th>
+        <td>Amazon</td>
+        <td>Google</td>
+      </tr>
+      <tr>
+        <th>Row -2</th>
+        <th>Contact</th>
+        <td>Maria Anders</td>
+        <td>Francisco</td>
+      </tr>
+      <tr>
+        <th>Row -3</th>
+        <th>Country</th>
+        <td>Germany</td>
+        <td>Maxico</td>
+      </tr>
+    </table>
+
+    <!-- - You can use any HTML elements/tags inside <td> element like <img>, <a> -->
+
+    <!-- =========================================================== -->
+
+    <!-- colspan -->
+    <table border="1">
+      <tr>
+        <th colspan="2">Name</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+    </table>
+
+    <!-- ==================================================================== -->
+
+    <!-- rowspan -->
+    <table border="1">
+      <tr>
+        <th rowspan="2">Name</th>
+        <td>Jill</td>
+        <td>Eve</td>
+      </tr>
+      <tr>
+        <td>Smith</td>
+        <td>Jackson</td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td>50</td>
+        <td>94</td>
+      </tr>
+    </table>
+
+    <!-- Defines a table caption -->
+    <table border="1">
+      <caption>
+        Table Example
+      </caption>
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td>Amazon</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Google</td>
+        <td>Francisco</td>
+        <td>Maxico</td>
+      </tr>
+    </table>
+
+    <!-- <thead>	Groups the header content in a table -->
+    <!-- <tbody>	Groups the body content in a table -->
+    <!-- <tfoot>	Groups the footer content in a table -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Column- 1</th>
+          <th>Column- 2</th>
+          <th>Column- 3</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Amazon</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Google</td>
+          <td>Francisco</td>
+          <td>Maxico</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th>Column- 1</th>
+          <th>Column- 2</th>
+          <th>Column- 3</th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- ============================================================= -->
+
+    <!-- HTML Audio -->
+    <!-- The HTML <audio> element is used to play an audio file on a web page. -->
+    <audio controls>
+      <source src="" type="audio/mpeg" />
+      Your browser does not support this Audio.
+    </audio>
+
+    <!-- The controls attribute adds audio controls, like play, pause, and volume. -->
+
+    <!-- =================================================================== -->
+
+    <!-- To start an audio file automatically, use the autoplay attribute -->
+    <audio controls autoplay>
+      <source src="" type="" />
+      Your browser does not support this Audio.
+    </audio>
+
+    <!-- ================================================================== -->
+
+    <!-- Add muted after autoplay to let your audio file start playing automatically (but muted) -->
+    <audio controls autoplay muted>
+      <source src="" type="" />
+      Your browser does not support this Audio.
+    </audio>
+
+    <!-- ====================================================================== -->
+
+    <!-- HTML Video -->
+    <video width="" height="" controls>
+      <source src="" type="video/mp4" />
+      Your browser does not support this Video.
+    </video>
+    <!-- The controls attribute adds video controls, like play, pause, and volume. -->
+
+    <!-- ======================================================================= -->
+
+    <!-- To start a video automatically, use the autoplay attribute -->
+    <video width="" height="" controls autoplay>
+      <source src="" type="" />
+      Your browser does not support this Video.
+    </video>
+
+    <!-- ========================================================================= -->
+
+    <!-- Add muted after autoplay to let your video start playing automatically (but muted) -->
+    <video width="" height="" controls autoplay muted>
+      <source src="" type="" />
+      Your browser does not support this Video.
+    </video>
+
+    <!-- ============================================================================ -->
+
+    <!-- HTML Forms -->
+    <!-- <form></form> Element represent the Form. -->
+    <form action="#">
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" value="John" /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <!-- The <label> tag defines a label for many form elements. -->
+
+    <!-- ==================================================== -->
+
+    <!-- The <form> element is a container for different types of input elements, such as: text fields,
+         checkboxes, radio buttons, submit buttons, etc. -->
+
+    <!-- An <input> element can be displayed in many ways, depending on the type attribute. -->
+    <!-- 
+        <input type="text">	Displays a single-line text input field
+        <input type="radio">	Displays a radio button (for selecting one of many choices)
+        <input type="checkbox">	Displays a checkbox (for selecting zero or more of many choices)
+        <input type="submit">	Displays a submit button (for submitting the form)
+        <input type="button">	Displays a clickable button -->
+
+    <!-- =============================================================== -->
+
+    <!-- The placeholder Attribute -->
+
+    <!-- The input placeholder attribute specifies a short hint that describes the expected value of 
+    an input field (a sample value or a short description of the expected format). -->
+    <form>
+      <label for="phone">Enter a phone number:</label>
+      <input type="number" id="phone" name="phone" placeholder="123-45-678" />
+    </form>
+
+    <!-- ================================================================ -->
+
+    <!-- The required Attribute -->
+
+    <!-- The input required attribute specifies that an input field must be filled out 
+    before submitting the form. -->
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+    </form>
+
+    <!-- ==================================================================== -->
+
+    <!-- Radio Buttons -->
+    <form>
+      <input type="radio" id="html" name="fav_language" />
+      <label for="html">HTML</label><br />
+      <input type="radio" id="css" name="fav_language" />
+      <label for="css">CSS</label><br />
+      <input type="radio" id="javascript" name="fav_language" />
+      <label for="javascript">JavaScript</label>
+    </form>
+
+    <!-- ============================================================== -->
+
+    <!-- Checkboxes -->
+    <form>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+      <label for="vehicle1"> I have a bike</label><br />
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+      <label for="vehicle2"> I have a car</label><br />
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+      <label for="vehicle3"> I have a boat</label>
+    </form>
+
+    <!-- ================================================================= -->
+
+    <!-- Drop Down Menu -->
+    <label for="cars">Choose a car:</label>
+    <select id="cars" name="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="fiat">Fiat</option>
+      <option value="audi">Audi</option>
+    </select>
+
+    <!-- The <option> elements defines an option that can be selected. -->
+    <!-- To define a pre-selected option, add the selected attribute to the option -->
+    <!-- Use the multiple attribute in <select> to allow the user to select more than one value -->
+
+      
+    <!-- The optgroup tag is used to group related options in a drop-down list -->
+    <label for="cars">Choose a car:</label>
+    <select id="cars" name="cars">
+      <optgroup label="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </optgroup>
+
+      <optgroup label="cars-2">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </optgroup>
+    </select>
+
+    <!-- ========================================================================== -->
+
+    <!-- The <textarea> Element -->
+
+    <!-- The <textarea> element defines a multi-line input field (a text area) -->
+    <textarea name="message" rows="10" cols="30">
+                The cat was playing in the garden.
+    </textarea>
+
+    <!-- The rows attribute specifies the visible number of lines in a text area.
+            The cols attribute specifies the visible width of a text area. -->
+
+    <!-- =============================================================================== -->
+
+    <!-- The <fieldset> and <legend> Elements -->
+
+    <!-- The <fieldset> element is used to group related data in a form. -->
+    <!-- The <legend> element defines a caption for the <fieldset> element. -->
+    <form action="#">
+      <fieldset>
+        <legend>Personal:</legend>
+        <label for="fname">First name:</label><br />
+        <input type="text" id="fname" name="fname" value="John" /><br />
+        <label for="lname">Last name:</label><br />
+        <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+        <input type="submit" value="Submit" />
+      </fieldset>
+    </form>
+
+    <!-- =================================================================== -->
+
+    <!-- HTML Iframes -->
+
+    <!-- An HTML iframe is used to display a web page within a web page. -->
+    <iframe
+      src="https://www.google.com/search?igu=1"
+      title="This is Google"
+      width="100%"
+      height="300px"
+    ></iframe>
+    <!-- Always include a title attribute (for screen readers) -->
+
+    <!-- ===================================================================== -->
+    <hr />
+
+    <!-- HTML Block and Inline Elements -->
+
+    <!-- Block-level Elements -->
+    <!-- A block-level element always starts on a new line, and the browsers automatically add 
+        some space (a margin) before and after the element. -->
+    <!-- A block-level element always takes up the full width available -->
+    <!-- Two commonly used block elements are: <p> and <div>. -->
+
+
+    <!-- Inline Elements -->
+    <!-- An inline element does not start on a new line. -->
+    <!-- An inline element only takes up as much width as necessary. -->
+    <!-- i.e. <span>, <a>, <input> -->
+
+    <!-- ======================================================================= -->
+
+    <!-- HTML Semantic Elements -->
+
+    <!-- Semantic elements = elements with a meaning. -->
+    <!-- Examples of non-semantic elements: <div> and <span> - Tells nothing about its content. -->
+    <!-- Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content. -->
+    <!-- i.e. -->
+
+    <!--    <article>
+            <aside>
+            <details>
+            <figcaption>
+            <figure>
+            <footer>
+            <header>
+            <main>
+            <mark>
+            <nav>
+            <section>
+            <summary>
+            <time>   -->
+
+    <div>
+      <h2>Google Chrome</h2>
+      <p>
+        Google Chrome is a web browser developed by Google, released in 2008.
+        Chrome is the world's most popular web browser today!
+      </p>
+    </div>
+
+    <div>
+      <h2>Mozilla Firefox</h2>
+      <p>
+        Mozilla Firefox is an open-source web browser developed by Mozilla.
+        Firefox has been the second most popular web browser since January,
+        2018.
+      </p>
+    </div>
+
+    <div>
+      <h2>Microsoft Edge</h2>
+      <p>
+        Microsoft Edge is a web browser developed by Microsoft, released in
+        2015. Microsoft Edge replaced Internet Explorer.
+      </p>
+    </div>
+
+    <!-- ======================================================================================== -->
+
+    <article>
+      <h2>Google Chrome</h2>
+      <p>
+        Google Chrome is a web browser developed by Google, released in 2008.
+        Chrome is the world's most popular web browser today!
+      </p>
+    </article>
+
+    <article>
+      <h2>Mozilla Firefox</h2>
+      <p>
+        Mozilla Firefox is an open-source web browser developed by Mozilla.
+        Firefox has been the second most popular web browser since January,
+        2018.
+      </p>
+    </article>
+
+    <article>
+      <h2>Microsoft Edge</h2>
+      <p>
+        Microsoft Edge is a web browser developed by Microsoft, released in
+        2015. Microsoft Edge replaced Internet Explorer.
+      </p>
+    </article>
+
+    <!-- ============================================================================== -->
+
+    <!-- HTML class Attribute -->
+
+    <!-- Multiple HTML elements can share the same class. -->
+    <div class="navbar">This is Div-1</div>
+    <div class="navbar">This is Div-2</div>
+    <div class="navbar">This is Div-3</div>
+
+    <!-- ================================================================================= -->
+    <hr />
+
+    <!-- HTML id Attribute -->
+
+    <!-- The HTML id is unique for an HTML element. -->
+    <!-- You cannot have more than one element with the same id in an HTML document. -->
+    <div id="nav">This is Div</div>
+
+    <!-- ==================
+    ============================================================= -->
+    <hr />
+
+    <!-- Difference Between Class and ID -->
+
+    <!-- A class name can be used by multiple HTML elements, while an id name must only be used
+         by one HTML element within the page -->
+  </body>
+</html>

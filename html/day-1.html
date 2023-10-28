@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HTML Elements -->
+
+    <!-- An HTML element is defined by a start tag, some content, and an end tag. -->
+    <tagname>Content goes here</tagname>
+
+    <!-- Some HTML elements have no content -->
+    <br> <hr>
+
+    <!-- ----------------------------------------------------------------------------- -->
+
+    <!-- HTML Attributes -->
+
+    <!-- HTML attributes provide additional information about HTML elements. -->
+    <a href="https://www.google.com">Visit Google</a>
+
+
+    <!-- The title attribute defines some extra information about an element. -->
+    <p title="I'm a batman">This is a paragraph.</p>
+
+    <!-- ----------------------------------------------------------------------------- -->
+
+    <!-- HTML Headings -->
+
+    <!-- HTML headings are titles or subtitles that you want to display on a webpage. -->
+    <!-- <h1> defines the most important heading. <h6> defines the least important heading. -->
+    <!-- Search engines use the headings to index the structure and content of your web pages. -->
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!-- ----------------------------------------------------------------------------------- -->
+
+    <!-- HTML Paragraphs -->
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+
+    <!-- HTML Horizontal Rules -->
+    The <hr> tag defines as a horizontal rule.
+
+
+    <!-- HTML Line Breaks -->
+    The HTML <br> element defines a line break.
+    Use <br> if you want a line break (a new line) without starting a new paragraph.
+
+    <!-- -------------------------------------------------------------------------------------- -->
+
+    <!-- HTML Text Formatting -->
+    HTML contains several elements for defining text with a special meaning.
+
+        <b> - Bold text
+        <strong> - Important text
+        <i> - Italic text
+        <em> - Emphasized text
+        <mark> - Marked text or highlighted text
+        <small> - Smaller text
+        <del> - Deleted text
+        <ins> - Inserted text
+        <sub> - Subscript text
+        <sup> - Superscript text
+        <q></q> - for Quotation
+
+    <!-- ----------------------------------------------------------------------------------------- -->
+
+    <!-- HTML Images -->
+    The HTML <img> tag is used to embed an image in a web page.
+
+    <img src="url" alt="alternatetext">
+
+    If a browser cannot find an image, it will display the value of the alt attribute
+    You can use the width and height attribute to specify the width and height of an image.
+
+    <img src="img_girl.jpg" alt="Girl in a jacket" width="400px" height="400px">
+
+    The width and height attributes always define the width and height of the image in pixels.
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <!-- HTML Links -->
+    HTML links are hyperlinks.
+    You can click on a link and jump to another page.
+    When you move the mouse over a link, the mouse arrow will turn into a little hand.
+    The HTML <a> tag defines a hyperlink.
+        
+    <a href="url">link text</a>
+
+
+    Use target="_blank" to open the linked page in a new tab.
+    <a href="https://www.google.com/" target="_blank">Visit Google!</a>
+
+
+    <!-- Absolute URLs vs. Relative URLs -->
+    An Absolute URL are using (a full web address) in the href attribute.
+    <a href="https://www.google.com/">Google</a>
+
+
+    A local link (a link to a page within the same website) is specified with a Relative URL
+    (without the "https://www" part):
+    <a href="google.html">Google</a>
+
+
+    <!-- Create Bookmarks -->
+    HTML links can be used to create bookmarks, so that readers can jump to specific parts of a web page.
+    <h2 id="C4">Chapter 4</h2>
+    <a href="#C4">Jump to Chapter 4</a>
+
+
+    <!-- Link to an Email Address -->
+    Use mailto: inside the href attribute to create a link that opens the user's email program
+    (to let them send a new email).
+    <a href="mailto:someone@example.com">Send email</a>
+
+    <!-- ---------------------------------------------------------------------------------------- -->
+
+    <!-- HTML Unordered Lists -->
+    The HTML <ul> tag defines an unordered (bulleted) list.
+    An unordered list starts with the <ul> tag. Each list item starts with the <li> tag.
+    The list items will be marked with bullets (small black circles) by default.
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+
+    The CSS 'list-style-type' property is used to define the style of the list item marker.
+    It can have one of the following values:
+
+    disc	  Sets the list item marker to a bullet (default)
+    circle	  Sets the list item marker to a circle
+    square	  Sets the list item marker to a square
+    none	  The list items will not be marked
+
+    <!-- ---------------------------------------------------------------------------------------- -->
+
+    <!-- HTML Ordered Lists -->
+    An ordered list starts with the <ol> tag. Each list item starts with the <li> tag.
+    The list items will be marked with numbers by default
+    
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+
+    The type attribute of the <ol> tag, defines the type of the list item marker.
+    Type	    Description
+    type="1"	The list items will be numbered with numbers (default)
+    type="A"	The list items will be numbered with uppercase letters
+    type="a"	The list items will be numbered with lowercase letters
+    type="I"	The list items will be numbered with uppercase roman numbers
+    type="i"	The list items will be numbered with lowercase roman numbers
+    
+    <ol type="A">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+
+    By default, an ordered list will start counting from 1. If you want to start 
+    counting from a specified number, you can use the start attribute.
+
+    <ol start="50">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+
+<!-- HTML Description Lists -->
+- A description list is a list of terms, with a description of each term.
+- The <dl> tag defines the description list, the <dt> tag defines the term (name), 
+  and the <dd> tag describes each term.
+
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+
+
+    
+</body>
+</html>

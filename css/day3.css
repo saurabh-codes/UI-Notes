@@ -1,0 +1,762 @@
+/* 1. CSS describes how HTML elements are to be displayed on screen.
+   2. CSS stands for Cascading Style Sheets. */
+
+/* ======================================================================================= */
+
+/* How To Add CSS */
+
+/* There are three ways of inserting a style sheet: */
+/*    - External CSS
+      - Internal CSS
+      - Inline CSS
+*/
+
+/* Cascading Order */
+
+/*   Inline style (inside an HTML element)
+     External and internal style sheets (in the head section)
+     Browser default
+*/
+
+/* ===================================================================== */
+
+/* CSS Selector */
+p {
+    color: blueviolet;
+}
+
+/* - Selector { Property: Value } */
+/* - p is a selector in CSS */
+/* - color is a property, and blueviolet is the property value */
+
+/* ======================================================================= */
+
+/* The CSS element Selector */
+/* - The element selector selects HTML elements based on the element name. */
+p {
+    text-align: center;
+    color: red;
+}
+
+/* ========================================================================= */
+
+/* The CSS id Selector */
+/* - The id selector uses the id attribute of an HTML element to select a specific element. */
+/* - To select an element with a specific id, write a hash (#) character, followed by the 
+     id of the element. */
+#para1 {
+    text-align: center;
+    color: red;
+}
+
+/* Note: An id name cannot start with a number! */
+
+/* ================================================================================ */
+
+/* The CSS class Selector */
+/* - The class selector selects HTML elements with a specific class attribute. */
+/* - To select elements with a specific class, write a period (.) character, followed by the class name. */
+.center {
+    text-align: center;
+    color: red;
+}
+
+/* Note: A class name cannot start with a number! */
+
+/* ===================================================================================== */
+
+/* The CSS Universal Selector */
+/* - The universal selector (*) selects all HTML elements on the page. */
+* {
+    text-align: center;
+    color: blue;
+}
+
+/* =========================================================================================== */
+
+/* CSS Comments */
+
+/* ========================================================================================== */
+
+/* CSS Color */
+/* - Colors are specified using predefined color names, or RGB, HEX, HSL,
+     RGBA, HSLA values. */
+
+/* Color Names */
+/* - In CSS, a color can be specified by using a predefined color name */
+
+
+/* HEX Value */
+/* - #rrggbb */
+/* - Where rr (red), gg (green) and bb (blue) are hexadecimal values */
+/* - hexadecimal values between 00 to ff */
+
+
+/* RGB Value */
+/* - rgb(red, green, blue) */
+/* - color value between 0 to 255 */
+
+
+/* RGBA Value */
+/* - rgba(red, green, blue, alpha) */
+/* - alpha parameter define transparancy -> 0 to 1 */
+
+/* - i.e. rgba(255, 99, 71, 0.5) */
+
+
+/* HSL Value */
+/* - hsl(hue, saturation, lightness) */
+/* - Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, 
+     and 240 is blue. */
+
+/* - Saturation is a percentage value. 0% means a shade of gray, and 100% is the 
+     full color.*/
+
+/* - Lightness is also a percentage. 0% is black, 50% is neither light or dark,
+     100% is white */
+
+
+/* HSLA Value */
+/* - hsla(hue, saturation, lightness, alpha) */
+/* - The alpha parameter is a number between 0.0 (fully transparent) and 1.0 
+     (not transparent at all) */
+
+
+body {
+    color: blue;
+}
+
+h1 {
+    color: green;
+}
+
+/* Text Color and Background Color   */
+body {
+    background-color: lightgrey;
+    color: blue;
+}
+
+/* ============================================================================================= */
+
+/* CSS Text */
+
+/* Text Alignment */
+/* - The text-align property is used to set the horizontal alignment of a text. */
+/* - A text can be left or right aligned, centered, or justified. */
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+}
+
+h3 {
+    text-align: right;
+}
+
+/* - When the text-align property is set to "justify",
+     each line is stretched so that every line has equal width,
+     and the left and right margins are straight (like in magazines and newspapers): */
+
+div {
+    text-align: justify;
+}
+
+/* --------------Continue---------------- */
+
+/* ================================================================================================ */
+
+
+/* CSS Text Decoration */
+/* - The text-decoration property is used to add a decoration line to text. */
+h1 {
+    text-decoration: overline;
+}
+
+h2 {
+    text-decoration: line-through;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+p {
+    text-decoration: overline underline;
+}
+
+/* - All links in HTML are underlined by default. Sometimes you see that links are styled with no underline.
+     The text-decoration: none; is used to remove the underline from links. */
+a {
+    text-decoration: none;
+}
+
+
+/* - The text-decoration-color property is used to set the color of the decoration line. */
+h1 {
+    text-decoration: overline;
+    text-decoration-color: red;
+}
+
+h2 {
+    text-decoration: line-through;
+    text-decoration-color: blue;
+}
+
+h3 {
+    text-decoration: underline;
+    text-decoration-color: green;
+}
+
+p {
+    text-decoration: overline underline;
+    text-decoration-color: purple;
+}
+
+/* ======================================================================================================== */
+
+/* CSS Text Transformation */
+/* - The text-transform property is used to specify uppercase and lowercase letters in a text.
+     It can be used to turn everything into uppercase or lowercase letters, or capitalize the first letter of each word */
+
+p.uppercase {
+    text-transform: uppercase;
+}
+
+p.lowercase {
+    text-transform: lowercase;
+}
+
+p.capitalize {
+    text-transform: capitalize;
+}
+
+/* ============================================================================================================= */
+
+/* CSS Text Spacing */
+
+/* Text Indentation */
+/* - The text-indent property is used to specify the indentation of the first line of a text */
+p {
+    text-indent: 50px;
+}
+
+/* Letter Spacing */
+/* - The letter-spacing property is used to specify the space between the characters in a text. */
+h1 {
+    letter-spacing: 5px;
+}
+
+h2 {
+    letter-spacing: -2px;
+}
+
+/* Line Height */
+/* - The line-height property is used to specify the space between lines: */
+p.small {
+    line-height: 0.8;
+}
+
+p.big {
+    line-height: 1.8;
+}
+
+/* Word Spacing */
+/* - The word-spacing property is used to specify the space between the words in a text. */
+p.one {
+    word-spacing: 10px;
+}
+
+p.two {
+    word-spacing: -2px;
+}
+
+/* ============================================================================================== */
+
+/* CSS Text Shadow */
+/* - Specify a horizontal and a vertical shadow */
+h1 {
+    text-shadow: 2px 2px;
+}
+
+/* - Specify a Color for the Shadow */
+h1 {
+    text-shadow: 2px 2px red;
+}
+
+/* - Add a Blur Effect to the Shadow */
+h1 {
+    text-shadow: 2px 2px 5px red;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* CSS Box Shadow */
+/* - Specify a horizontal and a vertical shadow */
+div {
+    box-shadow: 10px 10px;
+}
+
+/* - Specify a Color for the Shadow */
+div {
+    box-shadow: 10px 10px lightblue;
+}
+
+/* - Add a Blur Effect to the Shadow */
+div {
+    box-shadow: 10px 10px 5px lightblue;
+}
+
+/* - Set the Spread Radius of the Shadow */
+div {
+    box-shadow: 10px 10px 5px 12px lightblue;
+}
+
+/* Set the inset Parameter */
+/* -The inset parameter changes the shadow from an outer shadow (outset) to an inner shadow. */
+div {
+    box-shadow: 10px 10px 5px lightblue inset;
+}
+
+/* -Add Multiple Shadows */
+div {
+    box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+}
+
+/* ====================================================================================================== */
+
+/* CSS Fonts */
+/* - In CSS, we use the font-family property to specify the font of a text. */
+.p1 {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+
+/* Font Style */
+p.normal {
+    font-style: normal;
+}
+
+p.italic {
+    font-style: italic;
+}
+
+p.oblique {
+    font-style: oblique;
+}
+
+
+/* Font Weight */
+/* - The font-weight property specifies the weight of a font: */
+p.normal {
+    font-weight: normal;
+}
+
+p.thick {
+    font-weight: bold;
+}
+
+
+/* Font Size */
+/* - The font-size property sets the size of the text. */
+h1 {
+    font-size: 40px;
+}
+
+
+/* Google Fonts */
+/* - Just add a special style sheet link in the <head> section and then refer to the font
+     in the CSS. */
+/* 
+    <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+    body {
+    font-family: "Sofia", sans-serif;
+    }
+    </style>
+    </head> 
+*/
+
+/* ===================================================================================================== */
+
+/* CSS Units */
+/* - There are two types of units in css. */
+/* - 1. Absolute,  2. Relative */
+
+
+/* Absolute */
+/* - The absolute length units are fixed and a length expressed in any of these will appear as exactly that size. */
+/* 
+        Unit	Description
+
+        cm	    centimeters
+        mm	    millimeters
+        in	    inches (1in = 96px = 2.54cm)
+        px  	pixels (1px = 1/96th of 1in)
+        pt	    points (1pt = 1/72 of 1in)
+        pc	    picas (1pc = 12 pt) 
+*/
+
+
+/* Relative */
+/* - Relative units specify a size relative to another size property. */
+/* 
+        Unit	Description	
+
+        em	    Relative to the size of its direct parent
+        rem	    Relative to size of the root element	
+        vw	    Relative to 1% of the width of the viewport*	
+        vh	    Relative to 1% of the height of the viewport*	
+        %	    Relative to the parent element 
+*/
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+/* CSS Backgrounds */
+/* - The CSS background properties are used to add background effects for elements. */
+
+
+/* CSS background-color */
+/* - The background-color property specifies the background color of an element. */
+body {
+    background-color: lightblue;
+}
+
+
+/* Opacity / Transparency */
+/* - The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. 
+     The lower value, the more transparent. */
+div {
+    background-color: green;
+    opacity: 0.3;
+}
+
+/* ===================================================================================================== */
+
+/* CSS Background Image */
+/* - The background-image property specifies an image to use as the background of an element. */
+body {
+    background-image: url("paper.gif");
+}
+
+
+/* CSS background-repeat */
+/* - The background-repeat property sets if/how a background image will be repeated. */
+body {
+    background-image: url("gradient_bg.png");
+    background-repeat: repeat-x;
+}
+
+body {
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+}
+
+
+/* CSS background-position */
+/* - The background-position property is used to specify the position of the background image. */
+body {
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+
+/* CSS background-size */
+/* - The background-size property specifies the size of the background images. */
+body {
+    background-size: 300px 100px;
+    /* background-size: contain; */
+}
+
+
+/* CSS background-attachment */
+/* - The background-attachment property sets whether a background image scrolls with the 
+     rest of the page, or is fixed. */
+body {
+    background-image: url("img_tree.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/* CSS Linear Gradients */
+/* - Syntax */
+background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+
+
+/* - Direction - Top to Bottom (this is default) */
+#grad {
+    background-image: linear-gradient(red, yellow);
+}
+
+
+/* - Direction - Left to Right */
+#grad {
+    background-image: linear-gradient(to right, red , yellow);
+}
+
+
+/* - Direction - Diagonal */
+#grad {
+    background-image: linear-gradient(to bottom right, red, yellow);
+}
+
+
+/* - Using Angles */
+#grad {
+    background-image: linear-gradient(180deg, red, yellow);
+}
+
+/* ---------------------------------------------------------------------------- */
+
+/* Using Multiple Color Stops */
+/* - The following example shows a linear gradient (from top to bottom) with multiple color stops */
+#grad {
+    background-image: linear-gradient(red, yellow, green);
+}
+
+
+/* - i.e ( The following example shows how to create a linear gradient (from left to right) with the
+     color of the rainbow. ) */
+#grad {
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+/* Using Transparency */
+/* - CSS gradients also support transparency, which can be used to create fading effects. */
+#grad {
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+
+/* Repeating a linear-gradient */
+/* - The repeating-linear-gradient() function is used to repeat linear gradients */
+#grad {
+    background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* CSS Radial Gradients */
+/* - A radial gradient is defined by its center. */
+/* - To create a radial gradient you must also define at least two color stops. */
+
+/* - Syntax */
+/* background-image: radial-gradient(shape size at position, start-color, ..., last-color); */
+#grad {
+    background-image: radial-gradient(red, yellow, green);
+}
+
+
+/* Set Shape */
+/* - The shape parameter defines the shape. It can take the value circle or ellipse. The default
+     value is ellipse. */
+#grad {
+    background-image: radial-gradient(circle, red, yellow, green);
+}
+
+/* ========================================================================================================== */
+
+/* CSS Margins */
+/* - The CSS margin properties are used to create space around elements, outside of any 
+     defined borders. */
+p {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+
+/* Margin - Shorthand Property */
+p {
+    margin: 25px 50px 75px 100px;
+}
+
+/* 
+top margin is 25px
+right margin is 50px
+bottom margin is 75px
+left margin is 100px
+ */
+
+/* ============================================================================================================ */
+
+/* CSS Padding */
+/* - Padding is used to create space around an element's content, inside of any defined borders. */
+div {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
+
+/* - Padding - Shorthand Property */
+div {
+    padding: 25px 50px 75px 100px;
+}
+
+/* 
+top padding is 25px
+right padding is 50px
+bottom padding is 75px
+left padding is 100px
+ */
+
+/* ============================================================================================================== */
+
+/* CSS Height, Width and Max-width */
+/* - The CSS height and width properties are used to set the height and width of an element. */
+/* - The CSS max-width property is used to set the maximum width of an element. */
+div {
+    height: 200px;
+    width: 50%;
+    background-color: powderblue;
+}
+
+div {
+    max-width: 500px;
+    height: 100px;
+    background-color: powderblue;
+}
+
+/* ============================================================================================================== */
+
+/* CSS Box Model */
+/* - All HTML elements can be considered as boxes. */
+div {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+
+/* ==================================================================================== */
+
+/* CSS Borders */
+p.dotted {
+    border-style: dotted;
+}
+
+/* 
+        dotted - Defines a dotted border
+        dashed - Defines a dashed border
+        solid - Defines a solid border
+        double - Defines a double border
+        groove - Defines a 3D grooved border. The effect depends on the border-color value
+        ridge - Defines a 3D ridged border. The effect depends on the border-color value
+        inset - Defines a 3D inset border. The effect depends on the border-color value
+        outset - Defines a 3D outset border. The effect depends on the border-color value 
+*/
+
+
+/* - The border-style property can have from one to four values (for the top border,
+     right border, bottom border, and the left border). */
+p {
+    border-style: dotted solid double dashed;
+}
+
+
+/* CSS Border Width */
+/* - The border-width property specifies the width of the four borders. */
+p.one {
+    border-style: solid;
+    border-width: 5px;
+}
+
+/* - The border-width property can have from one to four values (for the top border,
+     right border, bottom border, and the left border): */
+p.three {
+    border-style: solid;
+    border-width: 25px 10px 4px 35px;
+    /* 25px top, 10px right, 4px bottom and 35px left */
+}
+
+
+/* CSS Border Color */
+/* - The border-color property is used to set the color of the four borders. */
+p.one {
+    border-style: solid;
+    border-color: red;
+}
+
+/* - The border-color property can have from one to four values (for the top border,
+     right border, bottom border, and the left border).  */
+p.one {
+    border-style: solid;
+    border-color: red green blue yellow;
+    /* red top, green right, blue bottom and yellow left */
+}
+
+
+/* CSS Border - Individual Sides */
+p {
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+}
+
+
+/* CSS Shorthand Border Property */
+p {
+    border: 5px solid red;
+}
+
+
+/* CSS Rounded Borders */
+/* - The border-radius property is used to add rounded borders to an element */
+p {
+    border: 2px solid red;
+    border-radius: 20px;
+}
+
+
+/* ===================================================================================== */
+
+/* CSS Links */
+
+/* - The four links states are: */
+/* 
+     a:link - a normal, unvisited link
+     a:visited - a link the user has visited
+     a:hover - a link when the user mouses over it
+     a:active - a link the moment it is clicked 
+*/
+
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}

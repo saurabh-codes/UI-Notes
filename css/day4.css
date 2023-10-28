@@ -1,0 +1,366 @@
+/* The display Property */
+/* - The display property specifies if/how an element is displayed. */
+
+/* ================================================================================================ */
+
+/* Hide an Element */
+/* - Hiding an element can be done by setting the display property to none. The element will be hidden, and 
+     the page will be displayed as if the element is not there: */
+
+h1.hidden {
+    display: none;
+}
+
+/* visibility:hidden; also hides an element. */
+/* - However, the element will still take up the same space as before. The element will be hidden, but still 
+     affect the layout: */
+
+h1.hidden {
+    visibility: hidden;
+}
+
+/* ===================================================================================================== */
+
+/* CSS Position */
+
+/* There are five different position values:
+
+    static
+    relative
+    fixed
+    absolute
+    sticky 
+*/
+
+/* position: static; */
+/* - HTML elements are positioned static by default. */
+div.static {
+    position: static;
+    border: 3px solid #73AD21;
+}
+
+/* position: relative; */
+/* - An element with position: relative; is positioned relative to its normal position. */
+/* - Setting the top, right, bottom, and left properties of a relatively-positioned element will 
+     cause it to be adjusted away from its normal position. Other content will not be adjusted to 
+     fit into any gap left by the element. */
+
+/* position: fixed; */
+/* - An element with position: fixed; is positioned relative to the viewport, which means it always 
+     stays in the same place even if the page is scrolled. The top, right, bottom, and left properties 
+     are used to position the element. */
+
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+
+/* position: absolute; */
+/* - An element with position: absolute; is positioned relative to the nearest positioned ancestor
+    (instead of positioned relative to the viewport, like fixed). */
+
+div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+}
+
+div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+}
+
+/* position: sticky; */
+/* - An element with position: sticky; is positioned based on the user's scroll position. */
+
+div.sticky {
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+}
+
+/* ===================================================================================== */
+
+/* CSS Overflow */
+/* - The CSS overflow property controls what happens to content that is too big to fit into an area. */
+
+/* 
+The overflow property has the following values:
+
+visible - Default. The overflow is not clipped. The content renders outside the element's box
+hidden - The overflow is clipped, and the rest of the content will be invisible
+scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+auto - Similar to scroll, but it adds scrollbars only when necessary 
+*/
+
+/* Note: The overflow property only works for block elements with a specified height. */
+
+/* ============================================================================================== */
+
+/* CSS float And clear */
+
+/* The CSS float property specifies how an element should float.
+The CSS clear property specifies what elements can float beside the cleared element and on which side. */
+
+
+/* The float Property */
+/* - The float property is used for positioning and formatting content e.g. let an image float left to the
+     text in a container. */
+/* 
+The float property can have one of the following values:
+
+left - The element floats to the left of its container
+right - The element floats to the right of its container */
+
+
+/* The clear Property */
+/* - The clear property specifies what should happen with the element that is next to a floating element. */
+
+
+/* The clear property can have one of the following values:
+
+none - The element is not pushed below left or right floated elements. This is default
+left - The element is pushed below left floated elements
+right - The element is pushed below right floated elements
+both - The element is pushed below both left and right floated elements
+inherit - The element inherits the clear value from its parent */
+
+/* ============================================================================================================= */
+
+/* The display: inline-block Value */
+/* - Compared to display: inline, the major difference is that display: inline-block allows to 
+     set a width and height on the element. */
+
+/* ============================================================================================================== */
+
+/* CSS Combinators */
+/* - A combinator is something that explains the relationship between the selectors. */
+
+/* There are four different combinators in CSS:
+
+descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~) */
+
+/* ================================================================= */
+/* 
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section>
+    <!-- not Child but Descendant -->
+    <p>Paragraph 3 in the div (inside a section element).</p>
+  </section>
+  <p>Paragraph 4 in the div.</p>
+</div>
+
+<p>Paragraph 5. Not in a div.</p>
+<p>Paragraph 6. Not in a div.</p>
+*/
+/* ====================================================================== */
+
+/* Descendant Selector
+The descendant selector matches all elements that are descendants of a specified element. */
+div p {
+    background-color: yellow;
+}
+
+
+/* Child Selector (>)
+The child selector selects all elements that are the children of a specified element. */
+div>p {
+    background-color: yellow;
+}
+
+
+/* Adjacent Sibling Selector (+) */
+/* The adjacent sibling selector is used to select an element that is directly after another specific element.
+Sibling elements must have the same parent element, and "adjacent" means "immediately following". */
+div+p {
+    background-color: yellow;
+}
+
+
+/* General Sibling Selector (~) */
+/* The general sibling selector selects all elements that are next siblings of a specified element. */
+div~p {
+    background-color: yellow;
+}
+
+/* ============================================================================================================== */
+
+/* CSS Pseudo-classes,   ( notation  ----->  : ) */
+
+/* A pseudo-class is used to define a special state of an element.
+
+For example, it can be used to:
+
+Style an element when a user mouses over it
+Style visited and unvisited links differently
+Style an element when it gets focus */
+
+/* Syntax */
+
+/* 
+selector:pseudo-class {
+    property: value;
+ }
+*/
+
+
+/* Hover on <div> */
+div:hover {
+    background-color: blue;
+}
+
+
+/* CSS - The :first-child Pseudo-class */
+/* The :first-child pseudo-class matches a specified element that is the first child of another element. */
+
+/* Match the first <p> element */
+p:first-child {
+    color: blue;
+}
+
+/* ======================================================================================================= */
+
+/* CSS Pseudo-elements */
+/* A CSS pseudo-element is used to style specified parts of an element.
+
+For example, it can be used to:
+
+Style the first letter, or line, of an element
+Insert content before, or after, the content of an element */
+
+/* Syntax */
+/* 
+selector::pseudo-element {
+    property: value;
+}
+*/
+
+
+/* The ::first-line Pseudo-element */
+/* The ::first-line pseudo-element is used to add a special style to the first line of a text. */
+p::first-line {
+    color: #ff0000;
+    font-variant: small-caps;
+}
+
+/* Note: The ::first-line pseudo-element can only be applied to block-level elements. */
+
+
+/* The ::first-letter Pseudo-element */
+/* The ::first-letter pseudo-element is used to add a special style to the first letter of a text. */
+p::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+}
+
+/* Note: The ::first-letter pseudo-element can only be applied to block-level elements. */
+
+
+/* CSS - The ::before Pseudo-element */
+/* The ::before pseudo-element can be used to insert some content before the content of an element. */
+h1::before {
+    content: url(smiley.gif);
+}
+
+
+/* CSS - The ::after Pseudo-element */
+/* The ::after pseudo-element can be used to insert some content after the content of an element. */
+h1::after {
+    content: url(smiley.gif);
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+/* CSS Transitions */
+/* - CSS transitions allows you to change property values smoothly, over a given duration. */
+
+<div> </div>
+
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+}
+  
+div:hover {
+    width: 300px;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+div {
+    transition: width 2s;
+}
+
+div:hover {
+    width: 300px;
+}
+
+/* ========================================================================================== */
+
+div {
+    transition: width 2s, height 4s;
+}
+
+div:hover {
+    width: 300px;
+    height: 300px;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
+/* CSS Animations */
+/* - CSS allows animation of HTML elements without using JavaScript or Flash! */
+
+<div></div>
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+  
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/* - The animation-duration property defines how long an animation should take to complete. 
+     If the animation-duration property is not specified, no animation will occur, because
+    the default value is 0s (0 seconds).  */
+
+<div></div>
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 7s;
+}
+  
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
