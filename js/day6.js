@@ -1,4 +1,4 @@
-// Introduction
+// Introduction 
 
 // We use javascript to create interactive websites.
 // - Cilent side Validation
