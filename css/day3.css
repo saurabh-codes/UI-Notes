@@ -571,6 +571,17 @@ background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
     background-image: radial-gradient(circle, red, yellow, green);
 }
 
+/* ==================================================================================== */
+
+/* CSS Box Model */
+/* - All HTML elements can be considered as boxes. */
+div {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+
 /* ========================================================================================================== */
 
 /* CSS Margins */
@@ -639,16 +650,7 @@ div {
 
 /* ============================================================================================================== */
 
-/* CSS Box Model */
-/* - All HTML elements can be considered as boxes. */
-div {
-    width: 300px;
-    border: 15px solid green;
-    padding: 50px;
-    margin: 20px;
-}
 
-/* ==================================================================================== */
 
 /* CSS Borders */
 p.dotted {
