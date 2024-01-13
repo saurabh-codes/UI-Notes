@@ -1,0 +1,93 @@
+/* CSS Transforms */
+/* - CSS transforms allow you to move, rotate, scale, and skew elements. */
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* The rotate() method  */
+/* - The rotate() method rotates an element clockwise or counter-clockwise according to a given degree. */
+
+/* <div class="flex-child">One</div> */
+.flex-child {  
+    background-color: burlywood;
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    /* --------------- */
+    transform: rotate(45deg);  /* rotate */
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* The scale() Method */
+/* - The scale() method increases or decreases the size of an element (according to the parameters 
+     given for the width and height). */
+div{
+    transform: scale(2);
+    
+    transform: scale(2, 3);
+    /* Direction --> X, Y */
+    
+    /* The scaleX() method increases or decreases the width of an element. */
+    transform: scaleX(2);
+    
+    /* The scaleY() method increases or decreases the height of an element. */
+    transform: scaleY(2);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* The translate() Method */
+/* - The translate() method moves an element from its current position (according to the parameters
+given for the X-axis and the Y-axis). */
+div {
+    transform: translate(50px, 100px);  
+    
+    transform: translate(-50px, -100px);        
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* The skew() Method */
+/* - The skew() method skews an element along the X and Y-axis by the given angles. */
+div {
+    transform: skew(20deg, 10deg);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* CSS Grid */
+/* - The CSS Grid Layout Module offers a grid-based layout system, with rows and columns,
+making it easier to design web pages without having to use floats and positioning. */
+
+<div class="container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+</div>
+    
+.container{
+    display: grid;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* The grid-template-columns Property */
+/* - The grid-template-columns property defines the number of columns in your grid layout, 
+     and it can define the width of each column. */
+.container{
+    display: grid;
+    grid-template-columns: 130px 100px;
+}
+
+
+/* The grid-template-rows Property */
+/* - The grid-template-rows property defines the height of each row. */
+.container{
+    display: grid;
+    grid-template-columns: 130px 100px;
+    grid-template-rows: 130px 130px 130px;
+}
+
