@@ -409,3 +409,19 @@ in alternate cycles. */
 
 /* Animation Shorthand */
 animation: name / duration / timing-function / delay / iteration-count / direction;
+
+/* --------------------------------------------------------------------------------------- */
+
+/* CSS Variables */
+/* - The var() function is used to insert the value of a CSS variable. */
+
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+}
+
+body { background-color: var(--blue); }
+
+h2 { border-bottom: 2px solid var(--blue); }
+
+/* --------------------------------------------------------------------------------------- */

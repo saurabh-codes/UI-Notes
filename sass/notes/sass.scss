@@ -1,0 +1,57 @@
+// Sass is a CSS pre-processor.
+// Sass reduces repetition of CSS and therefore saves time.
+// Sass stands for Syntactically Awesome Stylesheet
+
+// SCSS --> CSS3
+// SASS --> CSS
+
+// ------------------------------------------------------------------------
+
+// Operators
+// - font-size: 5rem + 5rem;
+// - font-size: 15rem - 5rem;
+
+// ------------------------------------------------------------------------
+
+// Variables
+// - Variables are a way to store information that you can re-use later.
+
+// - Sass Variable Syntax:
+$variablename: value;
+
+// - i.e.
+$bg-color: red;
+
+h1{
+    background-color: $bg-color;
+}
+
+// ------------------------------------------------------------------------
+
+// Nesting
+// - Sass lets you nest CSS selectors in the same way as HTML.
+
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li {
+      display: inline-block;
+    }
+    a {
+        display: block;
+        padding: 6px 12px;
+      text-decoration: none;
+    }
+}
+
+// ------------------------------------------------------------------------
+
+h1{
+    color: blueviolet;
+    &:hover{
+        color: tomato;
+    }
+}
