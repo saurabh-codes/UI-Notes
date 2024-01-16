@@ -55,3 +55,15 @@ h1{
         color: tomato;
     }
 }
+
+// ------------------------------------------------------------------------
+
+// Mixing
+@mixing flex{
+    display: flex;
+    justify-content: center:
+}
+
+h1{
+    @include flex;
+}

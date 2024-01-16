@@ -66,20 +66,29 @@ making it easier to design web pages without having to use floats and positionin
     <div class="grid-item">3</div>
     <div class="grid-item">4</div>
     <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
 </div>
     
 .container{
     display: grid;
+    border: 2px solid red;
 }
 
 /* --------------------------------------------------------------------------------------------- */
 
 /* The grid-template-columns Property */
 /* - The grid-template-columns property defines the number of columns in your grid layout, 
-     and it can define the width of each column. */
+and it can define the width of each column. */
 .container{
     display: grid;
     grid-template-columns: 130px 100px;
+}
+
+.grid-item{
+    background-color: blueviolet;
 }
 
 
@@ -91,3 +100,174 @@ making it easier to design web pages without having to use floats and positionin
     grid-template-rows: 130px 130px 130px;
 }
 
+.grid-item{
+    background-color: blueviolet;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* The grid-column / grid-column Property */
+/* - The grid-column / grid-column property defines on which column(s) / row to place an item. */
+/* - You define where the item will start, and where the item will end. */
+
+<div class="container">
+    <div class="grid-item item-1">1</div>
+    <div class="grid-item item-2">2</div>
+    <div class="grid-item item-3">3</div>
+    <div class="grid-item item-4">4</div>
+    <div class="grid-item item-5">5</div>
+    <div class="grid-item item-6">6</div>
+    <div class="grid-item item-7">7</div>
+    <div class="grid-item item-8">8</div>
+    <div class="grid-item item-9">9</div>
+</div>
+    
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 130px 130px 130px;
+}
+
+.grid-item{
+    background-color: blueviolet;
+}
+    
+.item-4{
+    grid-row: 1/2;
+    /* or */
+    /* grid-row-start: 1;
+    grid-row-end: 2; */
+    
+    grid-column: 1/2;
+}
+/* - we applying same properties in item-1 because we overlapping b/w item-4 and item-1. */
+.item-1{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* grid-template-areas */
+/* - The grid-area property can also be used to assign names to grid items. */
+/* - Named grid items can be referred to by the grid-template-areas property of the grid container. */
+
+<div class="container">
+<div class="grid-item item-1">Header</div>
+<div class="grid-item item-2">Menu</div>
+<div class="grid-item item-3">Main</div>
+<div class="grid-item item-4">Right</div>
+<div class="grid-item item-5">Footer</div>
+</div>
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+}
+
+.item-1{
+    grid-area: header;
+}
+.item-2{
+    grid-area: menu;
+}
+.item-3{
+    grid-area: main;
+}
+.item-4{
+    grid-area: right;
+}
+.item-5{
+    grid-area: footer;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* The Fr Unit */
+/* - Fr is a fractional unit and 1fr is for 1 part of the available space. */
+
+<div class="container">
+<div class="grid-item item-1">Header</div>
+<div class="grid-item item-2">Menu</div>
+<div class="grid-item item-3">Main</div>
+<div class="grid-item item-4">Right</div>
+<div class="grid-item item-5">Footer</div>
+</div>
+
+.container{
+    display: grid;
+    width: 80vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    or
+    grid-template-columns: repeat(3, 1fr);
+    /* gap */
+    gap: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+/* --------------------------------------------------------------------------------------------- */
+
+/* The justify-content Property */
+/* - The justify-content property is used to align the whole grid inside the container. */
+
+<div class="container">
+    <div class="grid-item item-1">1</div>
+    <div class="grid-item item-2">2</div>
+    <div class="grid-item item-3">3</div>
+    <div class="grid-item item-4">4</div>
+    <div class="grid-item item-5">5</div>
+    </div>
+    
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 50px 50px 50px;
+
+    justify-content: space-evenly;
+    or
+    justify-content: space-around;
+    or
+    justify-content: space-between;
+    or
+    justify-content: center;
+    or
+    justify-content: start;
+    or
+    justify-content: end;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* The align-content Property */
+/* - The align-content property is used to vertically align the whole grid inside the container. */
+
+<div class="container">
+    <div class="grid-item item-1">1</div>
+    <div class="grid-item item-2">2</div>
+    <div class="grid-item item-3">3</div>
+    <div class="grid-item item-4">4</div>
+    <div class="grid-item item-5">5</div>
+    </div>
+    
+.container{
+    display: grid;
+    height: 100vh;
+    or
+    height: 400px;
+    grid-template-columns: auto auto auto;
+
+    align-content: center;
+    or
+    align-content: space-evenly;
+    or
+    align-content: space-around;
+    or
+    align-content: space-between;
+    or
+    align-content: start;
+    or
+    align-content: end;
+}
